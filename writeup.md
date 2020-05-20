@@ -26,7 +26,7 @@ My pipeline consisted of 5 steps.
 2. Apply Gaussian noise
 3. Apply the Canny transform to find the edges.
 4. Apply an image mask using a manually identified region of interest.
-5. Draw hough line segments, and calculate weighted average of slope and intercepts.
+5. Draw hough line segments.
 6. Apply hough lines to original image
 
 ![alt text][image1]
