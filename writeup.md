@@ -24,9 +24,9 @@ My pipeline consisted of 5 steps.
 
 1. Convert to grayscale
 2. Apply Gaussian noise
-3. Apply the Canny transform
-4. Apply an image mask
-5. Draw hough lines
+3. Apply the Canny transform to find the edges.
+4. Apply an image mask using a manually identified region of interest.
+5. Draw hough line segments, and calculate weighted average of slope and intercepts.
 6. Apply hough lines to original image
 
 ![alt text][image1]
@@ -35,6 +35,9 @@ My pipeline consisted of 5 steps.
 ### 2. Identify potential shortcomings with your current pipeline
 
 I don't think it would work if the lane markings are too far apart, possibly in different countries or on old roads.
+As suggested by the Udacity reviewer, I could reduce lane shakiness by average using previous frames.
+
+It would also work better on curved roads if I fit using a quadratic instead of a linear equation.
 
 
 ### 3. Suggest possible improvements to your pipeline
